@@ -13,7 +13,6 @@ function App() {
   const fetchData = useCallback(async (keyword) => {
     const request = await fetch(
       `https://api.github.com/search/issues?q=${keyword}:repo:facebook/react&sort=created&order=asc`
-      //'https://pokeapi.co/api/v2/pokemon'
     );
     request.json().then((resp) => {
       return setData({
